@@ -4,6 +4,7 @@
         <div class="ui-g-12">
             <h1>Lançamentos</h1>
         </div>
+
         <div class="ui-g-12 ui-fluid">
           <label>Descrição</label>
           <input type="text" pInputText >
@@ -20,18 +21,32 @@
         <div class="ui-g-12">
           <button pButton type="submit" label="Pesquisar"></button>
         </div>
+
     </div>
     <div class="ui-g">
         <div class="ui-g-12">
-          <p-dataTable [value]="lancamentos">
+          <p-dataTable [value]="lancamentos" [paginator]="true" [rows]="4">
             <p-column field = "pessoa" header="Pessoa"></p-column>
             <p-column field = "descricao" header="Descrição"></p-column>
             <p-column field = "dataVencimento" header="Vencimento" styleClass="col-data"></p-column>
             <p-column field = "dataPagamento" header="Pagamento" styleClass="col-data"></p-column>
-            <p-column field = "valor" header="Valor" styleClass="col-valor"></p-column>
+            <p-column field = "valor" header="Valor" styleClass="col-valor">
+                <ng-template let-lanc="rowData" pTemplate="body">
+                    <span [ngStyle]="{ color: lanc.tipo === 'DESPESA' ? 'red' :'blue'}">
+                      {{lanc.valor}}
+                    </span>
+                </ng-template>
+            </p-column>
+            <p-column>
+              <ng-templante pTamplate="bory">
+
+              </ng-templante>
+            </p-column>
 
           </p-dataTable>
-
         </div>
+        <div class="ui-g-12">
+            <button pButton  label="Novo Lançamento"></button>
+          </div>
     </div>
 </div>
