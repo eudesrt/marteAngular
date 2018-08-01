@@ -5,21 +5,28 @@ import { NgModule } from '@angular/core';
 import { InputTextModule } from 'primeng/components/inputtext/inputtext';
 import { ButtonModule } from 'primeng/components/button/button';
 import { DataTableModule } from 'primeng/components/datatable/datatable';
+import { TooltipModule } from 'primeng/components/tooltip/tooltip';
+
 import { AngularFontAwesomeModule } from 'angular-font-awesome';
 
 
 
 import { AppComponent } from './app.component';
+import { ComponenteComponent } from './componente/componente.component';
+import { NavbarComponent } from './navbar/navbar.component';
 
 @NgModule({
   declarations: [
-    AppComponent
+    AppComponent,
+    ComponenteComponent,
+    NavbarComponent
   ],
   imports: [
     BrowserModule,
     InputTextModule,
     ButtonModule,
     AngularFontAwesomeModule,
+    TooltipModule,
     DataTableModule
   ],
   providers: [],
