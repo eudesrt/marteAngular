@@ -27,7 +27,11 @@
   <div class="ui-g">
     <div class="ui-g-12">
       <p-dataTable [value]="lancamentos" [paginator]="true" [rows]="2" [responsive]="true">
-        <p-column field="pessoa" header="Pessoa"></p-column>
+        <p-column  header="Pessoa">
+            <ng-template let-lanc="rowData" pTemplate="body">
+                <span>{{lanc.pessoa | uppercase }}</span>
+            </ng-template>
+        </p-column>
         <p-column field="descricao" header="Descrição"></p-column>
         <p-column field="dataVencimento" header="Vencimento" styleClass="col-data"></p-column>
         <p-column field="dataPagamento" header="Pagamento" styleClass="col-data"></p-column>
