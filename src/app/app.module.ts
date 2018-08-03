@@ -14,12 +14,14 @@ import { AngularFontAwesomeModule } from 'angular-font-awesome';
 import { AppComponent } from './app.component';
 import { ComponenteComponent } from './componente/componente.component';
 import { NavbarComponent } from './navbar/navbar.component';
+import { PessoasComponent } from './pessoas/pessoas.component';
 
 @NgModule({
   declarations: [
     AppComponent,
     ComponenteComponent,
-    NavbarComponent
+    NavbarComponent,
+    PessoasComponent
   ],
   imports: [
     BrowserModule,
