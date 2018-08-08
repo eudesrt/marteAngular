@@ -2,6 +2,7 @@ import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { BrowserModule } from '@angular/platform-browser';
 import { NgModule } from '@angular/core';
 
+import { InputTextareaModule } from 'primeng/components/inputtextarea/inputtextarea';
 import { InputTextModule } from 'primeng/components/inputtext/inputtext';
 import { ButtonModule } from 'primeng/components/button/button';
 import { DataTableModule } from 'primeng/components/datatable/datatable';
@@ -35,7 +36,8 @@ import { LacamentoCadastrComponent } from './lacamento-cadastr/lacamento-cadastr
     AngularFontAwesomeModule,
     TooltipModule,
     DataTableModule,
-    FormsModule
+    FormsModule,
+    InputTextareaModule
   ],
   providers: [],
   bootstrap: [AppComponent]
