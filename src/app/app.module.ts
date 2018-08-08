@@ -17,6 +17,7 @@ import { NavbarComponent } from './navbar/navbar.component';
 import { PessoasComponent } from './pessoas/pessoas.component';
 import { FormularioComponent } from './formulario/formulario.component';
 import { FormsModule } from '../../node_modules/@angular/forms';
+import { LacamentoCadastrComponent } from './lacamento-cadastr/lacamento-cadastr.component';
 
 @NgModule({
   declarations: [
@@ -24,7 +25,8 @@ import { FormsModule } from '../../node_modules/@angular/forms';
     ComponenteComponent,
     NavbarComponent,
     PessoasComponent,
-    FormularioComponent
+    FormularioComponent,
+    LacamentoCadastrComponent
   ],
   imports: [
     BrowserModule,
