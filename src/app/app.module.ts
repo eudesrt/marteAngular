@@ -2,6 +2,10 @@ import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { BrowserModule } from '@angular/platform-browser';
 import { NgModule } from '@angular/core';
 
+
+import { DropdownModule } from 'primeng/components/dropdown/dropdown';
+import { SelectButtonModule } from 'primeng/components/selectbutton/selectbutton';
+import { CalendarModule } from 'primeng/components/calendar/calendar';
 import { InputTextareaModule } from 'primeng/components/inputtextarea/inputtextarea';
 import { InputTextModule } from 'primeng/components/inputtext/inputtext';
 import { ButtonModule } from 'primeng/components/button/button';
@@ -10,7 +14,7 @@ import { TooltipModule } from 'primeng/components/tooltip/tooltip';
 
 import { AngularFontAwesomeModule } from 'angular-font-awesome';
 
-
+import { CurrencyMaskModule } from 'ng2-currency-mask';
 
 import { AppComponent } from './app.component';
 import { ComponenteComponent } from './componente/componente.component';
@@ -31,13 +35,18 @@ import { LacamentoCadastrComponent } from './lacamento-cadastr/lacamento-cadastr
   ],
   imports: [
     BrowserModule,
+    BrowserAnimationsModule,
     InputTextModule,
     ButtonModule,
     AngularFontAwesomeModule,
     TooltipModule,
     DataTableModule,
     FormsModule,
-    InputTextareaModule
+    InputTextareaModule,
+    CalendarModule,
+    SelectButtonModule,
+    DropdownModule,
+    CurrencyMaskModule
   ],
   providers: [],
   bootstrap: [AppComponent]

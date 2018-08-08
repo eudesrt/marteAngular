@@ -1,0 +1,6 @@
+npm install ng2-currency-mask --save
+import { CurrencyMaskModule } from "ng2-currency-mask";
+
+https://www.npmjs.com/package/ng2-currency-mask
+
+
