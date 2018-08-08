@@ -15,13 +15,16 @@ import { AppComponent } from './app.component';
 import { ComponenteComponent } from './componente/componente.component';
 import { NavbarComponent } from './navbar/navbar.component';
 import { PessoasComponent } from './pessoas/pessoas.component';
+import { FormularioComponent } from './formulario/formulario.component';
+import { FormsModule } from '../../node_modules/@angular/forms';
 
 @NgModule({
   declarations: [
     AppComponent,
     ComponenteComponent,
     NavbarComponent,
-    PessoasComponent
+    PessoasComponent,
+    FormularioComponent
   ],
   imports: [
     BrowserModule,
@@ -29,7 +32,8 @@ import { PessoasComponent } from './pessoas/pessoas.component';
     ButtonModule,
     AngularFontAwesomeModule,
     TooltipModule,
-    DataTableModule
+    DataTableModule,
+    FormsModule
   ],
   providers: [],
   bootstrap: [AppComponent]
