@@ -26,6 +26,7 @@ import { FormularioComponent } from './formulario/formulario.component';
 import { LacamentoCadastrComponent } from './lacamento-cadastr/lacamento-cadastr.component';
 import { PessoaCadastroComponent } from './pessoa-cadastro/pessoa-cadastro.component';
 import { MessageComponent } from './message/message.component';
+import { LacamentoGridComponent } from './lacamento-grid/lacamento-grid.component';
 
 
 @NgModule({
@@ -37,7 +38,8 @@ import { MessageComponent } from './message/message.component';
     FormularioComponent,
     LacamentoCadastrComponent,
     PessoaCadastroComponent,
-    MessageComponent
+    MessageComponent,
+    LacamentoGridComponent
 
   ],
   imports: [

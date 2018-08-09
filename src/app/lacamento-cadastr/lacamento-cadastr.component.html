@@ -10,7 +10,8 @@
 
         <div class="ui-g-6 ui-md-3 ui-fluid ">
           <label>Vencimento</label>
-          <p-calendar dateFormar="dd//mm/yy" [showIcon]="true"></p-calendar>
+          <p-calendar dateFormar="dd//mm/yy" [showIcon]="true" ngModel name="vencimento" #vencimento="ngModel" required></p-calendar>
+          <app-message [control]="vencimento" error="required" text="Informe a Data de Vencimento" ></app-message>
         </div>
 
         <div class="ui-g-6 ui-md-3 ui-fluid">
@@ -20,13 +21,10 @@
 
         <div class="ui-g-12 ui-md-9 ui-fluid">
             <label>Descrição</label>
-            <input pInputText type="text" name="descricao"
-              ngModel #descricao="ngModel" required minlength="5">
+            <input pInputText type="text" name="descricao" ngModel #descricao="ngModel" required minlength="5">
 
-            <app-message [control]="descricao" error="required"
-              text="Informe uma descrição"></app-message>
-            <app-message [control]="descricao" error="minlength"
-              text="Mínimo de {{ descricao.errors?.minlength?.requiredLength }} caracteres"></app-message>
+            <app-message [control]="descricao" error="required" text="Informe uma descrição"></app-message>
+            <app-message [control]="descricao" error="minlength" text="Mínimo de {{ descricao.errors?.minlength?.requiredLength }} caracteres"></app-message>
           </div>
 
         <div class= "ui-g-12 ui-md-3 ui-fluid">
@@ -36,7 +34,8 @@
 
         <div class="ui-g-12 ui-md-6 ui-fluid">
           <label>Categoria</label>
-          <p-dropdown [options]="categorias" [autoWidth]="false" [placeholder]="'Selecione'"  ></p-dropdown>
+          <p-dropdown [options]="categorias" [autoWidth]="false" [placeholder]="'Selecione'" ngModel name="categoria" #categoria="ngModel" required  ></p-dropdown>
+          <app-message [control]= "categoria" error="required" text="Informe a Categoria"></app-message>
         </div>
         <div class="ui-g-12 ui-md-6 ui-fluid">
            <label>Pessoa</label>
