@@ -7,3 +7,5 @@ https://www.npmjs.com/package/ng2-currency-mask
 comando pra gerar so o arquivo ts
 ng g c message --spec=false --inline-template --inline-style
 
+teste
+
