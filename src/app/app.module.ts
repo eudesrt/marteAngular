@@ -1,63 +1,28 @@
+import { CoreModule } from './core/core.module';
 import { FormsModule } from '@angular/forms';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { BrowserModule } from '@angular/platform-browser';
-import { NgModule } from '@angular/core';
-
-
-import { InputTextModule } from 'primeng/components/inputtext/inputtext';
-import { ButtonModule } from 'primeng/components/button/button';
-import { DataTableModule } from 'primeng/components/datatable/datatable';
-import { TooltipModule } from 'primeng/components/tooltip/tooltip';
-import { InputTextareaModule } from 'primeng/components/inputtextarea/inputtextarea';
-import { CalendarModule } from 'primeng/components/calendar/calendar';
-import { SelectButtonModule } from 'primeng/components/selectbutton/selectbutton';
-import { DropdownModule } from 'primeng/components/dropdown/dropdown';
-import { InputMaskModule } from 'primeng/components/inputmask/inputmask';
-
-import { AngularFontAwesomeModule } from 'angular-font-awesome';
-
-import { CurrencyMaskModule } from 'ng2-currency-mask';
 
 import { AppComponent } from './app.component';
-import { ComponenteComponent } from './componente/componente.component';
-import { NavbarComponent } from './navbar/navbar.component';
-import { PessoasComponent } from './pessoas/pessoas.component';
-import { FormularioComponent } from './formulario/formulario.component';
-import { LacamentoCadastrComponent } from './lacamento-cadastr/lacamento-cadastr.component';
-import { PessoaCadastroComponent } from './pessoa-cadastro/pessoa-cadastro.component';
-import { MessageComponent } from './message/message.component';
-import { LacamentoGridComponent } from './lacamento-grid/lacamento-grid.component';
+import { PessoaModule } from './pessoa/pessoa.module';
+import { LancamentosModule } from './lancamentos/lancamentos.module';
+import { NgModule } from '@angular/core';
 
 
 @NgModule({
   declarations: [
-    AppComponent,
-    ComponenteComponent,
-    NavbarComponent,
-    PessoasComponent,
-    FormularioComponent,
-    LacamentoCadastrComponent,
-    PessoaCadastroComponent,
-    MessageComponent,
-    LacamentoGridComponent
-
+    AppComponent
   ],
+
   imports: [
     BrowserModule,
     BrowserAnimationsModule,
     FormsModule,
 
-    InputTextModule,
-    ButtonModule,
-    DataTableModule,
-    TooltipModule,
-    InputTextareaModule,
-    CalendarModule,
-    SelectButtonModule,
-    DropdownModule,
-    InputMaskModule,
+    LancamentosModule,
+    PessoaModule,
+    CoreModule
 
-    CurrencyMaskModule
   ],
   providers: [],
   bootstrap: [AppComponent]
