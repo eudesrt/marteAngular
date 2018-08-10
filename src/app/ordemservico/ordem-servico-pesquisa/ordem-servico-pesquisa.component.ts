@@ -8,8 +8,7 @@ import { WsOrdemServicoService } from '../ws-ordem-servico.service';
 })
 export class OrdemServicoPesquisaComponentquisaComponent implements OnInit {
 
-  constructor(private wOrdemServicoService: WsOrdemServicoService ) {}
-
+  constructor(private wOrdemServicoService: WsOrdemServicoService) { }
   tabelaservico = [];
 
   ngOnInit() {
@@ -17,8 +16,10 @@ export class OrdemServicoPesquisaComponentquisaComponent implements OnInit {
   }
 
   pesquisar() {
-    console.log(this.wOrdemServicoService.pesquisar());
-    this.wOrdemServicoService.pesquisar().then(tabelaservico => this.tabelaservico = tabelaservico);
+
+      console.log('Iniciando');
+      console.log();
+      this.wOrdemServicoService.pesquisarOrdemServico().subscribe(tabelaservico => this.tabelaservico = tabelaservico);
   }
 
 

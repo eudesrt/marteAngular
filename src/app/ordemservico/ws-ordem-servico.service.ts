@@ -1,19 +1,20 @@
 import { Http } from '@angular/http';
 import { Injectable } from '@angular/core';
+import { Observable, Observer } from 'rxjs';
+import { map } from 'rxjs/operators';
+import { fromEventPattern } from '../../../node_modules/rxjs';
 
-@Injectable({
-  providedIn: 'root'
-})
+@Injectable()
 export class WsOrdemServicoService {
 
-  ordemservicoURL = 'http://localhost:8080/servico';
+  ordemservicoURL = 'https://ws-marte-api.herokuapp.com/servico';
 
-  constructor(private http: Http) { }
 
-  pesquisar(): Promise<any> {
-   return this.http.get(`${this.ordemservicoURL}`)
-    .toPromise()
-    .then(response => response.json().content);
+  constructor(private http: Http) {
+  }
 
+  pesquisarOrdemServico(): Observable<any> {
+
+    return this.http.get(`${this.ordemservicoURL}`).pipe(map(res => res.json()));
   }
 }
