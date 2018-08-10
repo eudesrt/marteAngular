@@ -1,0 +1,30 @@
+<p-dataTable [value]="tabelaservico" [paginator]="true" [rows]="10" [responsive]="true">
+  <p-column field="os" header="OS" styleClass="col-os"></p-column>
+  <p-column header="Entrada" styleClass="col-data">
+      <ng-template let-ordemservico="rowData" pTemplate="body">
+        <span>{{ ordemservico.dtEntrada | date:'dd/MM/yyyy' }}</span>
+      </ng-template>
+    </p-column>
+    <p-column header="Fechamento" styleClass="col-data">
+        <ng-template let-ordemservico="rowData" pTemplate="body">
+          <span>{{ ordemservico.dtCommit | date:'dd/MM/yyyy' }}</span>
+        </ng-template>
+    </p-column>
+    <p-column header="Commits" styleClass="col-data">
+        <ng-template let-ordemservico="rowData" pTemplate="body">
+          <span>{{ ordemservico.dtHomologacao | date:'dd/MM/yyyy' }}</span>
+        </ng-template>
+    </p-column>
+  <p-column field="titulo" header="Descrição"></p-column>
+  <p-column filed="status" header="Status" styleClass="col-data">
+      <ng-template let-ordemservico="rowData" pTemplate="body">
+        <span [style.color]="ordemservico.status.status === 'FECHADO' ? 'red' : 'green'">{{ ordemservico.status.status }}</span>
+      </ng-template>
+    </p-column>
+    <p-column styleClass="col-acoes">
+        <ng-template pTemplate="body">
+          <a pButton icon="fa fa-pencil" pTooltip="Editar" tooltipPosition="top"></a>
+          <button pButton icon="fa fa-trash" pTooltip="Excluir" tooltipPosition="top"></button>
+        </ng-template>
+      </p-column>
+  </p-dataTable>

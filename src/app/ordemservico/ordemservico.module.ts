@@ -1,12 +1,7 @@
-import { HttpModule } from '@angular/http';
-import { FormsModule } from '@angular/forms';
 import { NgModule } from '@angular/core';
 import { CommonModule } from '@angular/common';
-
-import { PessoaCadastroComponent } from './pessoa-cadastro/pessoa-cadastro.component';
-import { PessoasComponent } from './pessoas/pessoas.component';
-import { PessoaGridComponent } from './pessoa-grid/pessoa-grid.component';
-import { SharedModule } from '../shared/shared.module';
+import { OrdemServicoPesquisaComponentquisaComponent } from './ordem-servico-pesquisa/ordem-servico-pesquisa.component';
+import { OrdemServicoGridComponent } from './ordem-servico-grid/ordem-servico-grid.component';
 
 import { InputTextModule } from 'primeng/components/inputtext/inputtext';
 import { ButtonModule } from 'primeng/components/button/button';
@@ -17,12 +12,12 @@ import { CalendarModule } from 'primeng/components/calendar/calendar';
 import { SelectButtonModule } from 'primeng/components/selectbutton/selectbutton';
 import { DropdownModule } from 'primeng/components/dropdown/dropdown';
 import { InputMaskModule } from 'primeng/components/inputmask/inputmask';
+import { FormsModule } from '../../../node_modules/@angular/forms';
 
 @NgModule({
   imports: [
     CommonModule,
     FormsModule,
-    HttpModule,
 
     InputTextModule,
     ButtonModule,
@@ -33,18 +28,8 @@ import { InputMaskModule } from 'primeng/components/inputmask/inputmask';
     SelectButtonModule,
     DropdownModule,
     InputMaskModule,
-
-    SharedModule
-
   ],
-  declarations: [
-                  PessoaGridComponent,
-                  PessoaCadastroComponent,
-                  PessoasComponent
-                ],
-  exports: [
-              PessoaCadastroComponent,
-              PessoasComponent
-          ]
+  declarations: [OrdemServicoPesquisaComponentquisaComponent, OrdemServicoGridComponent],
+  exports: [OrdemServicoPesquisaComponentquisaComponent]
 })
-export class PessoaModule { }
+export class OrdemservicoModule { }

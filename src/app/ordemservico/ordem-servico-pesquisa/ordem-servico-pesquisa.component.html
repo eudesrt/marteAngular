@@ -1,0 +1,25 @@
+<div class="container">
+  <div class="ui-g">
+
+    <div class="ui-g-12">
+      <h1>Ordem de Serviço - Consulta</h1>
+    </div>
+
+    <div class="ui-g-12 ui-md-4 ui-fluid">
+        <label>PESQUISAR</label>
+    </div>
+    <div class="ui-g-12" >
+        <input pInputText type="text">
+    </div>
+    <div class="ui-g-12 ">
+        <button pButton type="submit" label="Pesquisar"></button>
+    </div>
+
+    <div class="ui-g">
+      <div class="ui-g-12">
+        <app-ordem-servico-grid [tabelaservico]="tabelaservico" ></app-ordem-servico-grid>
+      </div>
+    </div>
+
+  </div>
+</div>

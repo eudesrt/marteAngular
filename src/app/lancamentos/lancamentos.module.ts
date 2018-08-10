@@ -16,7 +16,7 @@ import { InputTextModule } from 'primeng/components/inputtext/inputtext';
 import { LacamentoCadastrComponent } from './lacamento-cadastr/lacamento-cadastr.component';
 import { ComponenteComponent } from './componente/componente.component';
 import { LacamentoGridComponent } from './lacamento-grid/lacamento-grid.component';
-import { SharedModule } from './../shared/shared.module';
+import { SharedModule } from '../shared/shared.module';
 
 
 @NgModule({

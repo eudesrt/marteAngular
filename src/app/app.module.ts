@@ -7,6 +7,8 @@ import { AppComponent } from './app.component';
 import { PessoaModule } from './pessoa/pessoa.module';
 import { LancamentosModule } from './lancamentos/lancamentos.module';
 import { NgModule } from '@angular/core';
+import { OrdemservicoModule } from './ordemservico/ordemservico.module';
+import { WsOrdemServicoService } from './ordemservico/ws-ordem-servico.service';
 
 
 @NgModule({
@@ -21,10 +23,11 @@ import { NgModule } from '@angular/core';
 
     LancamentosModule,
     PessoaModule,
-    CoreModule
+    CoreModule,
+    OrdemservicoModule
 
   ],
-  providers: [],
+  providers: [WsOrdemServicoService],
   bootstrap: [AppComponent]
 })
 export class AppModule { }
