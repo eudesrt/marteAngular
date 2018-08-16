@@ -24,7 +24,8 @@ import { WsOrdemServicoService } from './ordemservico/ws-ordem-servico.service';
     LancamentosModule,
     PessoaModule,
     CoreModule,
-    OrdemservicoModule
+    OrdemservicoModule,
+
 
   ],
   providers: [WsOrdemServicoService],

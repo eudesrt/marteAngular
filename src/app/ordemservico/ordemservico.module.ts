@@ -13,6 +13,7 @@ import { SelectButtonModule } from 'primeng/components/selectbutton/selectbutton
 import { DropdownModule } from 'primeng/components/dropdown/dropdown';
 import { InputMaskModule } from 'primeng/components/inputmask/inputmask';
 import { FormsModule } from '../../../node_modules/@angular/forms';
+import { OrdemServicoNewComponent } from './ordem-servico-new/ordem-servico-new.component';
 
 @NgModule({
   imports: [
@@ -29,7 +30,7 @@ import { FormsModule } from '../../../node_modules/@angular/forms';
     DropdownModule,
     InputMaskModule,
   ],
-  declarations: [OrdemServicoPesquisaComponentquisaComponent, OrdemServicoGridComponent],
-  exports: [OrdemServicoPesquisaComponentquisaComponent]
+  declarations: [OrdemServicoPesquisaComponentquisaComponent, OrdemServicoGridComponent, OrdemServicoNewComponent],
+  exports: [OrdemServicoPesquisaComponentquisaComponent, OrdemServicoNewComponent]
 })
 export class OrdemservicoModule { }

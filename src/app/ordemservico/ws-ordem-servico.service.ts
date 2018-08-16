@@ -9,6 +9,7 @@ export class WsOrdemServicoService {
 
   ordemservicoURL = 'https://ws-marte-api.herokuapp.com/servico';
 
+ // ordemservicoURL = 'http://localhost:8080/servico';
 
   constructor(private http: Http) {
   }
