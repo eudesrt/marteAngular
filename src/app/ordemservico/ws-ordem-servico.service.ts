@@ -1,10 +1,9 @@
 import { OrdemServico } from './../core/model';
-import { Http } from '@angular/http';
+import { Http, Headers } from '@angular/http';
 import { Injectable } from '@angular/core';
-import { HttpHeaders } from '@angular/common/http';
 import { Observable } from 'rxjs';
-import { map, catchError } from 'rxjs/operators';
-import { fromEventPattern } from '../../../node_modules/rxjs';
+import { map } from 'rxjs/operators';
+
 
 @Injectable()
 export class WsOrdemServicoService {
@@ -13,7 +12,12 @@ export class WsOrdemServicoService {
 
   ordemservicoURL = 'http://localhost:8080/servico';
 
+
+
   constructor(private http: Http) {
+
+   //  this.cabecalho.append('Content-type', 'application/json');
+    // this.cabecalho.append('Authorization', '');
   }
 
   pesquisarOrdemServico(): Observable<any> {
@@ -22,18 +26,29 @@ export class WsOrdemServicoService {
   }
 
 
-/*
-  addchamado(ordemServico: OrdemServico): Observable<OrdemServico> {
-    const httpOptions = {
-      headers: new HttpHeaders({ 'Content-Type': 'application/json' })
-    };
 
-    return this.http.post<OrdemServico>(this.ordemservicoURL, ordemServico, httpOptions).pipe(
-      catchError(this.handleError('criar', ordemServico)
-    ));
+  // salvaChamado(ordemServico: OrdemServico) {
+  //   const headers = new Headers();
+  //   headers.append('Content-Type', 'application/json');
+
+  //   console.log('Iniciando CREATE');
+  //   console.log(headers);
+  //   console.log(ordemServico);
+
+  //   return this.http.post(`${this.ordemservicoURL}`, ordemServico, { headers } ).pipe(map(res => res.json()));
+
+  // }
+
+  adicionar(ordemServico: OrdemServico): Promise<OrdemServico> {
+    const headers = new Headers();
+    headers.append('Content-Type', 'application/json');
+
+    return this.http.post(this.ordemservicoURL,
+        JSON.stringify(ordemServico), { headers })
+      .toPromise()
+      .then(response => response.json());
+  }
 
 
-
-  } */
 
 }

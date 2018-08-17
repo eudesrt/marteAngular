@@ -15,3 +15,16 @@ NPM UPDATE
 npm i npm to update
 
 
+
+
+ERRO
+{
+error TS2307: Cannot find module 'rxjs-compat/Observable'
+}
+
+SOLUCAO
+{
+  npm install rxjs@6 rxjs-compat@6 --save
+}
+
+

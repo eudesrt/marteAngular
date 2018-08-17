@@ -19,13 +19,19 @@ export class OrdemServicoPesquisaComponentquisaComponent implements OnInit {
   }
 
   salvar(form: FormControl) {
-    console.log(this.ordemServico);
+
+    this.wOrdemServicoService.adicionar(this.ordemServico);
+      form.reset();
+      this.ordemServico = new OrdemServico();
+
+    this.pesquisar();
+
+
   }
 
   pesquisar() {
 
     console.log('Iniciando');
-    console.log();
     this.wOrdemServicoService.pesquisarOrdemServico().subscribe(tabelaservico => this.tabelaservico = tabelaservico);
   }
 
