@@ -1,25 +1,30 @@
 <div class="container">
-  <div class="ui-g">
 
-    <div class="ui-g-12">
-      <h1>Ordem de Serviço - Consulta</h1>
-    </div>
-
-    <div class="ui-g-12 ui-md-4 ui-fluid">
-        <label>PESQUISAR</label>
-    </div>
-    <div class="ui-g-12" >
-        <input pInputText type="text">
-    </div>
-    <div class="ui-g-12 ">
-        <button pButton type="submit" label="Pesquisar"></button>
-    </div>
-
+  <form #f="ngForm" autocomplete="off" (ngSubmit)="salvar(f)">
     <div class="ui-g">
       <div class="ui-g-12">
-        <app-ordem-servico-grid [tabelaservico]="tabelaservico" ></app-ordem-servico-grid>
+        <h1>Ordem de Servico</h1>
+      </div>
+      <div class="ui-g-12 ui-md-2 ui-fluid">
+        <label>Ordem de Serviço</label>
+        <input pInputText type="text" name="os" [(ngModel)]="ordemServico.os" #descricao="ngModel" required>
+      </div>
+
+      <div class="ui-g-12 ui-md-10 ui-fluid">
+        <label>Descrição</label>
+        <input pInputText type="text" name="titulo" [(ngModel)]="ordemServico.titulo" #descricao="ngModel" required>
+      </div>
+
+      <div class="ui-g-12">
+        <button pButton type="submit" label="Salvar" [disabled]="f.invalid"></button>
+      </div>
+
+      <div class="ui-g">
+        <div class="ui-g-12">
+          <app-ordem-servico-grid [tabelaservico]="tabelaservico"></app-ordem-servico-grid>
+        </div>
       </div>
     </div>
+  </form>
 
-  </div>
 </div>
